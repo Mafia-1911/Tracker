@@ -18,7 +18,10 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
-
+.key77{
+  background-color: #2ecc71;
+  stroke: #2ecc71;
+}
 .container {
   margin: 30px auto;
   width: 350px;
