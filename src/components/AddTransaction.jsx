@@ -1,14 +1,24 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
+import {GlobalContext} from '../context/GlobalState';
 
 //in the inputs we need some component level state ,use value for connecting the state 
 export default function AddTransaction() {
     const [text,setText]= useState('');
     const [amount,setAmount]= useState(0);
+
+    const {addTransaction} = useContext(GlobalContext);
+
+    const onSubmit= e=>e.preventDefault();
+    const newTransaction={
+      id:Date.now(),
+      text:text ,
+      amount:+amount,//you can also use parse int 
+    }
     return (
 
         <div>
             <h3>Add new transaction</h3>
-      <form >
+      <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="text">Text</label>
           <input type="text" value={text} onChange={e=>setText(e.target.value)}placeholder="Enter text..." />
