@@ -3,5 +3,5 @@ class me :
         self.name=name
 
     def say-HI(self):
-        print('hello my name',self.name)
+        print('hello my name',self.name); 
         
