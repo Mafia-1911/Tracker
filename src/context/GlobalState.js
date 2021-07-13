@@ -44,4 +44,5 @@ function addTransaction(transaction) {
     
         {children}
         </GlobalContext.Provider>)
+
 }
